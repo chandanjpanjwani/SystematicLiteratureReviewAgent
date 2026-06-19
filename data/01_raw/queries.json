@@ -4,23 +4,13 @@
     "per_page": 200
   },
   "semantic_scholar": {
-<<<<<<< HEAD
     "query": "platform strategy+biotech OR biopharmaceutical OR \"life sciences\"+innovation performance OR \"competitive advantage\" OR \"value creation\" OR \"firm performance\" OR \"strategic alliance\" OR \"drug development\"",
-    "year": "2005-",
-    "limit": 100,
-    "fields": "title,abstract,year,authors,externalIds,tldr"
-  },
-  "europepmc": {
-    "query": "(TITLE:\"platform strateg*\" OR ABSTRACT:\"platform strateg*\" OR TITLE:\"platform business model\" OR ABSTRACT:\"platform business model\" OR TITLE:\"platform ecosystem\" OR ABSTRACT:\"platform ecosystem\" OR TITLE:\"innovation platform\" OR ABSTRACT:\"innovation platform\" OR TITLE:\"technology platform\" OR ABSTRACT:\"technology platform\" OR TITLE:\"platform-based\" OR ABSTRACT:\"platform-based\" OR TITLE:\"modular platform\" OR ABSTRACT:\"modular platform\") AND (TITLE:\"biotechnology\" OR ABSTRACT:\"biotechnology\" OR TITLE:\"biotech\" OR ABSTRACT:\"biotech\" OR TITLE:\"biopharmaceutical\" OR ABSTRACT:\"biopharmaceutical\" OR TITLE:\"biopharma\" OR ABSTRACT:\"biopharma\" OR TITLE:\"life sciences\" OR ABSTRACT:\"life sciences\") AND (TITLE:\"innovation\" OR ABSTRACT:\"innovation\" OR TITLE:\"competitive advantage\" OR ABSTRACT:\"competitive advantage\" OR TITLE:\"value creation\" OR ABSTRACT:\"value creation\" OR TITLE:\"firm performance\" OR ABSTRACT:\"firm performance\" OR TITLE:\"strategic alliance\" OR ABSTRACT:\"strategic alliance\" OR TITLE:\"drug development\" OR ABSTRACT:\"drug development\" OR TITLE:\"collaboration\" OR ABSTRACT:\"collaboration\") AND (PUB_YEAR:[2005 TO 2026]) AND (LANG:eng)",
-=======
-    "query": "platform strategy biotechnology",
     "year": "2005-",
     "limit": 100,
     "fields": "title,abstract,year,authors,externalIds,tldr,venue"
   },
   "europepmc": {
-    "query": "(\"platform strategy\" OR \"platform strategies\" OR \"platform business model\" OR \"platform ecosystem\" OR \"innovation platform\" OR \"technology platform\" OR \"platform-based\" OR \"modular platform\") AND (biotechnology OR biotech OR biopharmaceutical OR biopharma OR \"life sciences\") AND (innovation OR \"competitive advantage\" OR \"value creation\" OR \"firm performance\" OR \"strategic alliance\" OR \"drug development\" OR collaboration) AND (PUB_YEAR:[2005 TO 2026]) AND (LANG:eng)",
->>>>>>> c127369 (Initial commit: complete SLR pipeline run on biotech platform strategies)
+    "query": "(TITLE:\"platform strateg*\" OR ABSTRACT:\"platform strateg*\" OR TITLE:\"platform business model\" OR ABSTRACT:\"platform business model\" OR TITLE:\"platform ecosystem\" OR ABSTRACT:\"platform ecosystem\" OR TITLE:\"innovation platform\" OR ABSTRACT:\"innovation platform\" OR TITLE:\"technology platform\" OR ABSTRACT:\"technology platform\" OR TITLE:\"platform-based\" OR ABSTRACT:\"platform-based\" OR TITLE:\"modular platform\" OR ABSTRACT:\"modular platform\") AND (TITLE:\"biotechnology\" OR ABSTRACT:\"biotechnology\" OR TITLE:\"biotech\" OR ABSTRACT:\"biotech\" OR TITLE:\"biopharmaceutical\" OR ABSTRACT:\"biopharmaceutical\" OR TITLE:\"biopharma\" OR ABSTRACT:\"biopharma\" OR TITLE:\"life sciences\" OR ABSTRACT:\"life sciences\") AND (TITLE:\"innovation\" OR ABSTRACT:\"innovation\" OR TITLE:\"competitive advantage\" OR ABSTRACT:\"competitive advantage\" OR TITLE:\"value creation\" OR ABSTRACT:\"value creation\" OR TITLE:\"firm performance\" OR ABSTRACT:\"firm performance\" OR TITLE:\"strategic alliance\" OR ABSTRACT:\"strategic alliance\" OR TITLE:\"drug development\" OR ABSTRACT:\"drug development\" OR TITLE:\"collaboration\" OR ABSTRACT:\"collaboration\") AND (PUB_YEAR:[2005 TO 2026]) AND (LANG:eng)",
     "resultType": "core",
     "pageSize": 100
   },
