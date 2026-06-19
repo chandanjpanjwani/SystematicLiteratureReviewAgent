@@ -1,0 +1,26 @@
+{"phase": "identified_openalex", "n": 2000}
+<<<<<<< HEAD
+{"phase": "identified_s2", "n": 0}
+{"phase": "identified_epmc", "n": 8}
+{"phase": "identified_crossref", "n": 2000}
+{"phase": "after_dedup", "n": 3879}
+{"phase": "after_prefilter", "n": 3793}
+{"phase": "screened_include", "n": 92}
+{"phase": "screened_maybe", "n": 0}
+{"phase": "screened_exclude", "n": 3701}
+{"phase": "full_text_retrieved", "n": 53}
+{"phase": "extracted", "n": 52}
+{"phase": "included_final", "n": 52}
+=======
+{"phase": "identified_crossref", "n": 2000}
+{"phase": "identified_s2", "n": 0}
+{"phase": "identified_epmc", "n": 2000}
+{"phase": "after_dedup", "n": 5815}
+{"phase": "after_prefilter", "n": 5695}
+{"phase": "screened_include", "n": 97}
+{"phase": "screened_maybe", "n": 3457}
+{"phase": "screened_exclude", "n": 2141}
+{"phase": "full_text_retrieved", "n": 54}
+{"phase": "extracted", "n": 53}
+{"phase": "included_final", "n": 23}
+>>>>>>> c127369 (Initial commit: complete SLR pipeline run on biotech platform strategies)

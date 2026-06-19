@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(./**)",
+      "Write(./data/**)",
+      "Write(./output/**)",
+      "Edit(./data/**)",
+      "Edit(./output/**)",
+      "Bash(python scripts/*)",
+      "Bash(python3 scripts/*)",
+      "Bash(ls *)",
+      "Bash(wc *)",
+      "Bash(head *)",
+      "Bash(tail *)",
+      "WebFetch"
+    ],
+    "deny": [
+      "Bash(rm -rf *)",
+      "Edit(./protocol.md)",
+      "Edit(./CLAUDE.md)"
+    ]
+  }
+}
