@@ -35,11 +35,11 @@ NEW_ARTICLES_FILE = BASE / "output" / "monitor_new_articles.jsonl"
 QUERIES_FILE = BASE / "data" / "01_raw" / "queries.json"
 CORPUS_EXCEL = BASE / "output" / "excel" / "Corpus.xlsx"
 
-SMTP_HOST = "mail.hiz-saarland.de"
-SMTP_PORT = 465
-SMTP_USER = "chpa00004@stud.uni-saarland.de"
-EMAIL_TO = "chpa00004@stud.uni-saarland.de"
-OPENALEX_MAILTO = SMTP_USER
+SMTP_HOST = "smtp.gmail.com"
+SMTP_PORT = 587
+SMTP_USER = "cpanjwani00003@gmail.com"
+EMAIL_TO = ["chpa00004@stud.uni-saarland.de", "nicolas.kiefer@uni-saarland.de"]
+OPENALEX_MAILTO = "chpa00004@stud.uni-saarland.de"
 
 
 # ---------------------------------------------------------------------------
@@ -263,25 +263,31 @@ def send_email(new_papers: list[dict], from_date: str, to_date: str, dry_run: bo
 
     body = "\n".join(lines)
 
+    recipients = EMAIL_TO if isinstance(EMAIL_TO, list) else [EMAIL_TO]
+
     if dry_run:
         print("\n--- EMAIL PREVIEW ---")
-        print(f"To: {EMAIL_TO}")
+        print(f"To: {', '.join(recipients)}")
         print(f"Subject: {subject}")
         print(body)
         print("--- END PREVIEW ---\n")
         return
 
+    recipients = EMAIL_TO if isinstance(EMAIL_TO, list) else [EMAIL_TO]
+
     msg = MIMEMultipart("alternative")
     msg["Subject"] = subject
     msg["From"] = SMTP_USER
-    msg["To"] = EMAIL_TO
+    msg["To"] = ", ".join(recipients)
     msg.attach(MIMEText(body, "plain"))
 
     ctx = ssl.create_default_context()
-    with smtplib.SMTP_SSL(SMTP_HOST, SMTP_PORT, context=ctx) as server:
+    with smtplib.SMTP(SMTP_HOST, SMTP_PORT) as server:
+        server.ehlo()
+        server.starttls(context=ctx)
         server.login(SMTP_USER, smtp_password)
-        server.sendmail(SMTP_USER, EMAIL_TO, msg.as_string())
-    print(f"Email sent to {EMAIL_TO}")
+        server.sendmail(SMTP_USER, recipients, msg.as_string())
+    print(f"Email sent to {', '.join(recipients)}")
 
 
 # ---------------------------------------------------------------------------
